@@ -1,0 +1,498 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 1000px;
+    background: #222327;
+}
+
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+    transition: 0.6s;
+}
+
+header.sticky{
+    padding: 5px 100px;
+    background: #fff;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+header .logo{
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    position: relative;
+    list-style: none;
+}
+
+header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 700;
+    transition: 0.6s;
+}
+
+header.sticky .logo,
+header.sticky ul li a{
+    color: #000;
+}
+
+
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: url(images/laptop.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h2{
+    color: #fff;
+    font-size: 90px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1em;
+}
+
+.banner h2 span{
+    color: #3770a5
+}
+
+.sec{
+    background: #fff;
+    padding: 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content{
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.mxw800p{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h3{
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+p{
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.btn{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    background: #000;
+    text-decoration: none;
+    color: #fff;
+}
+
+.services{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.services .box{
+    width: 300px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.services .box .icon-box{
+    margin-top: 25px;
+}
+
+.services .box .icon-box img{
+    max-width: 100px;
+    margin-bottom: 15px;
+}
+
+.services .box .content h2{
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.stats{
+    background: #222327;
+    margin-top: -250px;
+    padding-top: 250px;
+}
+
+.stats h3, .stats p{
+    color: #fff;
+}
+
+.stats-box{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 20px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.stats-box h2{
+    color: #fff;
+    font-size: 36px;
+}
+
+.stats-box h4{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.work-box{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.work-box .brand{
+    position: relative;
+    background: #3770a5;
+    min-height: 300px;
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.work-box .brand:hover{
+    background: #222327;
+}
+
+.work-box .brand a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+.work-box .brand:hover a{
+    color: #fff;
+}
+
+.team-box{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    grid-gap: 30px;
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.team-box .member{
+    position: relative;
+    background: #222327;
+    min-height: 300px;
+    width: 250px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-box .member .img-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.team-box .member .img-box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-box .member .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222327;
+    transition: 0.2s;
+    opacity: 0;
+}
+.team-box .member:hover .details{
+    opacity: 1;
+}
+
+.team-box .member .details h2{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.team-box .member .details h2 span{
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.contact{
+    background: #222327;
+}
+
+.contact h3, .contact p{
+    color: #fff;
+}
+
+.contactForm{
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.contact-form form{
+    width: 100%;
+}
+
+.contact-form .row-100{
+    display: flex;
+    width: 100%;
+}
+
+.contact-form .row-100 .input-50{
+    width: 50%;
+    margin: 0 20px;
+}
+
+.contact-form .row-100 .input-100{
+    width: 100%;
+    margin: 0 20px;
+}
+
+.contact-form .row-100 input, .contact-form .row-100 textarea{
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 20px 0;
+    resize: none;
+}
+
+.contact-form .row-100 textarea{
+    height: 200px;
+}
+
+.contact-form .row-100 input::placeholder, 
+.contact-form .row-100 textarea::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form .row-100 input[type="submit"]{
+    background: #fff;
+    color: #222327;
+    max-width: 100px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.social{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.social ul{
+    display: flex;
+}
+.social ul li{
+    list-style: none;
+}
+.social ul li a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 30px;
+}
+
+.social ul li a i{
+    font-size: 40px;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.social ul li a:hover i{
+    color: #3770a5;
+}
+
+.toggle{
+    display: none;
+}
+
+@media (max-width: 992px){
+    .toggle{
+        display: block;
+        position: relative;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .toggle:before{
+        content: '';
+        position: absolute;
+        top: 4px;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        box-shadow: 0 10px 0  #000;
+        transition: 0.5s;
+    }
+
+    .toggle:after{
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        transition: 0.5s;
+    }
+
+    header, header.sticky{
+        padding: 5px 50px;
+        background: #fff;
+    }
+    header ul{
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        overflow: auto;
+        background: #fff;
+        visibility: hidden;
+        opacity: 0;
+    }
+    header.active ul{
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        padding-top: 20px;
+    }
+    header.active ul li a{
+        display: inline-block;
+        margin: 10px 0;
+        font-size: 20px;
+    }
+    header .logo,
+    header ul li a {
+        color: #000;
+    }
+
+    .banner{
+        background-position: center;
+    }
+    .banner h2{
+        font-size: 60px;
+        padding: 0 50px;
+    }
+
+    .sec{
+        padding: 100px 50px 50px 50px;
+    }
+
+    .services .box{
+        width: 100%;
+    }
+
+    .stats{
+        padding-top: 250px;
+    }
+
+    .row-100{
+        flex-direction: column;
+    }
+
+    .contact-form .row-100 .input-50, 
+    .contact-form .row-100 .input-100{
+        width: 100%;
+    }
+}
