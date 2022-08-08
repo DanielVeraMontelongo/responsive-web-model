@@ -412,6 +412,7 @@ p{
         position: relative;
         width: 30px;
         cursor: pointer;
+        margin-top: -4px;
     }
 
     .toggle:before{
