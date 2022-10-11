@@ -408,32 +408,35 @@ p{
 
 @media (max-width: 992px){
     .toggle{
-        display: block;
-        position: relative;
-        width: 30px;
-        cursor: pointer;
-        margin-top: -4px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        width: 2rem;
+        height: 2rem;
+        border: 0;
+        background: transparent;
+        gap: .65rem;
     }
 
-    .toggle:before{
-        content: '';
-        position: absolute;
-        top: 4px;
-        width: 100%;
+    .toggle > div{
+        background: black;
         height: 2px;
-        background: #000;
-        box-shadow: 0 10px 0  #000;
-        transition: 0.5s;
+        width: 100%;
+        border-radius: 5px;
+        transition: all .5s;
+        transform-origin: left;
     }
 
-    .toggle:after{
-        content: '';
-        position: absolute;
-        bottom: 4px;
-        width: 100%;
-        height: 2px;
-        background: #000;
-        transition: 0.5s;
+    header.active .toggle div:first-child{
+        transform: rotate(50deg);
+    }
+
+    header.active .toggle div:nth-child(2){
+        opacity: 0;
+    }
+    
+    header.active .toggle div:last-child{
+        transform: rotate(-50deg);
     }
 
     header, header.sticky{
